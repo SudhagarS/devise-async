@@ -7,7 +7,7 @@ module Devise
         include ::SuckerPunch::Job
 
         def self.enqueue(*args)
-          new.async.perform(*args)
+          perform_async(*args)
         end
 
         # Return the connection to the pool after we're done with it
